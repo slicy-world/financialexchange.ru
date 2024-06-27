@@ -1,0 +1,190 @@
+<html><head><base href="https://websim.ai/c/financialexchange.ru"><title>Финансовая Биржа - Симулятор (03.01.2024)</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .stock-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .stock-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .stock-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .stock-price {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  .stock-change {
+    font-weight: bold;
+  }
+  .positive {
+    color: green;
+  }
+  .negative {
+    color: red;
+  }
+  .news-ticker {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .news-ticker p {
+    animation: ticker 20s linear infinite;
+    white-space: nowrap;
+  }
+  @keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .market-summary {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .daily-report {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .event-notification {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Симулятор</h1>
+    <p>Дата: 03.01.2024 | Баланс: $59,626.54</p>
+  </div>
+  
+  <div class="container">
+    <div class="daily-report">
+      <h2>Ежедневный отчет</h2>
+      <p>Вчерашний баланс: $60,000</p>
+      <p>Изменение баланса: -$373.46</p>
+      <p>Причина: Списание ежемесячного платежа по кредиту</p>
+    </div>
+
+    <div class="event-notification">
+      <h3>Важное событие дня</h3>
+      <p>Центральный банк неожиданно снизил ключевую ставку на 0.25%. Это может повлиять на стоимость акций финансового сектора и общую рыночную динамику.</p>
+    </div>
+    
+    <button class="btn">Следующий день</button>
+    <button class="btn">Мой портфель</button>
+    <button class="btn">Новости</button>
+    <button class="btn">Банк</button>
+    
+    <div class="news-ticker">
+      <p>Центробанк снизил ключевую ставку • Акции КвантТех взлетели на фоне нового открытия • НефтьРус сообщает о рекордной прибыли • Индекс РТС растет третий день подряд • ТехноГигант анонсировал новую линейку продуктов</p>
+    </div>
+    
+    <div class="market-summary">
+      <h3>Обзор рынка</h3>
+      <p>Индекс РТС: 1,578.20 <span class="positive">(+1.12%)</span></p>
+      <p>Объем торгов: 95.7 млрд руб</p>
+      <p>Тренд: Активный рост</p>
+    </div>
+    
+    <h2>Список компаний</h2>
+    <div class="stock-list">
+      <div class="stock-item">
+        <div class="stock-name">ТехноГигант</div>
+        <div class="stock-price">$1,305.80</div>
+        <div class="stock-change positive">+1.04%</div>
+        <p>Отрасль: Технологии</p>
+        <button class="btn">Подробнее</button>
+      </div>
+      
+      <div class="stock-item">
+        <div class="stock-name">НефтьРус</div>
+        <div class="stock-price">$86.90</div>
+        <div class="stock-change positive">+2.72%</div>
+        <p>Отрасль: Энергетика</p>
+        <button class="btn">Подробнее</button>
+      </div>
+      
+      <div class="stock-item">
+        <div class="stock-name">КвантТех</div>
+        <div class="stock-price">$53.20</div>
+        <div class="stock-change positive">+6.93%</div>
+        <p>Отрасль: Квантовые технологии</p>
+        <button class="btn">Подробнее</button>
+      </div>
+      
+      <div class="stock-item">
+        <div class="stock-name">МедТех</div>
+        <div class="stock-price">$69.40</div>
+        <div class="stock-change positive">+1.83%</div>
+        <p>Отрасль: Здравоохранение</p>
+        <button class="btn">Подробнее</button>
+      </div>
+      
+      <div class="stock-item">
+        <div class="stock-name">ФинансПро</div>
+        <div class="stock-price">$122.80</div>
+        <div class="stock-change negative">-1.37%</div>
+        <p>Отрасль: Финансы</p>
+        <button class="btn">Подробнее</button>
+      </div>
+      
+      <div class="stock-item">
+        <div class="stock-name">АгроХолдинг</div>
+        <div class="stock-price">$37.10</div>
+        <div class="stock-change positive">+0.82%</div>
+        <p>Отрасль: Сельское хозяйство</p>
+        <button class="btn">Подробнее</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    console.log("Обновлена страница финансовой биржи на следующий день");
+  </script>
+</body></html>
