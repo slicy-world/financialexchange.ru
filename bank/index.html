@@ -1,0 +1,127 @@
+<html><head><base href="https://websim.ai/c/financialexchange.ru"><title>Финансовая Биржа - Симулятор: Банковские операции</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .bank-info {
+    margin-top: 20px;
+  }
+  .bank-info h2 {
+    color: #1e3c72;
+  }
+  .bank-info p {
+    margin: 10px 0;
+  }
+  .account-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .transaction-form {
+    margin-top: 20px;
+  }
+  .transaction-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .transaction-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .loan-info {
+    margin-top: 20px;
+    background-color: #f0f8ff;
+    border: 1px solid #b0d4ff;
+    border-radius: 5px;
+    padding: 15px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Симулятор</h1>
+    <p>Дата: 02.01.2024 | Баланс: $10,000</p>
+  </div>
+  
+  <div class="container">
+    <h2>Банковские операции</h2>
+    
+    <div class="account-summary">
+      <h3>Сводка по счету</h3>
+      <p><strong>Текущий баланс:</strong> $10,000</p>
+      <p><strong>Доступные средства:</strong> $10,000</p>
+      <p><strong>Процентная ставка по вкладу:</strong> 3.5% годовых</p>
+    </div>
+    
+    <div class="bank-info">
+      <h3>Депозиты и снятия</h3>
+      <p>Вы можете пополнить свой счет или снять средства в любое время. Минимальная сумма операции: $100.</p>
+      
+      <div class="transaction-form">
+        <form method="GET" action="/c/financialexchange.ru/bank/transaction">
+          <label for="amount">Сумма:</label>
+          <input type="number" id="amount" name="amount" min="100" step="0.01" required>
+          <button type="submit" name="action" value="deposit" class="btn">Внести средства</button>
+          <button type="submit" name="action" value="withdraw" class="btn">Снять средства</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="loan-info">
+      <h3>Кредиты</h3>
+      <p>Вы можете взять кредит для увеличения своих инвестиционных возможностей.</p>
+      <p><strong>Текущая процентная ставка по кредиту:</strong> 8.5% годовых</p>
+      <p><strong>Максимальная сумма кредита:</strong> $50,000</p>
+      <p><strong>Срок кредита:</strong> до 1 года</p>
+      <button class="btn">Подать заявку на кредит</button>
+    </div>
+    
+    <div class="bank-info">
+      <h3>История транзакций</h3>
+      <p>01.01.2024 - Начальный баланс: $10,000</p>
+      <!-- Здесь будет отображаться история транзакций пользователя -->
+    </div>
+    
+    <button class="btn" onclick="window.location.href='/c/financialexchange.ru'">Вернуться на главную</button>
+  </div>
+
+  <script>
+    console.log("Открыта страница банковских операций");
+  </script>
+</body></html>

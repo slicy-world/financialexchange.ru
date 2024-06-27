@@ -1,0 +1,119 @@
+<html><head><base href="https://websim.ai/c/financialexchange.ru/loan/apply?amount=50000&term=12&purpose=investment">
+<title>Финансовая Биржа - Симулятор: Результат заявки на кредит</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .approved {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+  }
+  .rejected {
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+  }
+  .loan-details {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Симулятор</h1>
+    <p>Дата: 02.01.2024 | Баланс: $10,000</p>
+  </div>
+  
+  <div class="container">
+    <h2>Результат заявки на кредит</h2>
+    
+    <div class="result approved">
+      <h3>Заявка одобрена!</h3>
+      <p>Поздравляем! Ваша заявка на кредит была одобрена на следующих условиях:</p>
+    </div>
+    
+    <div class="loan-details">
+      <p><strong>Сумма кредита:</strong> $50,000</p>
+      <p><strong>Срок кредита:</strong> 12 месяцев</p>
+      <p><strong>Процентная ставка:</strong> 8.5% годовых</p>
+      <p><strong>Ежемесячный платеж:</strong> $4,373.46</p>
+      <p><strong>Общая сумма выплат:</strong> $52,481.52</p>
+      <p><strong>Цель кредита:</strong> Инвестиции</p>
+    </div>
+    
+    <div class="warning">
+      <p><strong>Внимание:</strong> Инвестиции связаны с рисками. Пожалуйста, тщательно оцените свои финансовые возможности перед принятием окончательного решения.</p>
+    </div>
+    
+    <p>Для завершения процесса и получения средств, пожалуйста, нажмите кнопку "Принять кредит". Средства будут немедленно зачислены на ваш счет.</p>
+    
+    <button class="btn" onclick="acceptLoan()">Принять кредит</button>
+    <button class="btn" onclick="rejectLoan()">Отказаться</button>
+    
+    <p>Если вы хотите изменить условия кредита, вы можете вернуться к форме заявки и подать новую заявку.</p>
+    
+    <button class="btn" onclick="window.location.href='/c/financialexchange.ru/bank'">Вернуться к банковским операциям</button>
+  </div>
+
+  <script>
+    function acceptLoan() {
+      alert("Поздравляем! Кредит в размере $50,000 успешно зачислен на ваш счет. Ваш новый баланс: $60,000");
+      // В реальном приложении здесь был бы код для обновления баланса пользователя
+      window.location.href = '/c/financialexchange.ru';
+    }
+
+    function rejectLoan() {
+      alert("Вы отказались от кредита. Ваш баланс остается неизменным.");
+      window.location.href = '/c/financialexchange.ru/bank';
+    }
+
+    console.log("Отображен результат заявки на кредит");
+  </script>
+</body></html>

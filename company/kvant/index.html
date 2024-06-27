@@ -1,0 +1,205 @@
+<html><head><base href="/c/financialexchange.ru/stock/kvanttech"><title>КвантТех - Детальная информация</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .stock-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .stock-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .stock-price {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .stock-change {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .positive {
+    color: green;
+  }
+  .negative {
+    color: red;
+  }
+  .chart {
+    width: 100%;
+    height: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  .company-info, .financial-data, .news {
+    margin-bottom: 20px;
+  }
+  .trade-panel {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .news-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  .news-date {
+    color: #666;
+    font-size: 0.9em;
+  }
+  .quantum-animation {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    border-radius: 50%;
+    animation: quantum-pulse 2s infinite alternate;
+    margin: 20px auto;
+  }
+  @keyframes quantum-pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.1); opacity: 0.8; }
+  }
+  .market-sentiment {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+  }
+  .sentiment-meter {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .sentiment-value {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 75%;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Симулятор</h1>
+    <p>Дата: 03.01.2024 | Баланс: $59,626.54</p>
+  </div>
+  
+  <div class="container">
+    <div class="stock-info">
+      <div>
+        <div class="stock-name">КвантТех (KVANT)</div>
+        <div class="stock-price">$55.86</div>
+        <div class="stock-change positive">+5.00% (+$2.66)</div>
+      </div>
+      <div class="quantum-animation"></div>
+    </div>
+    
+    <div class="chart">
+      <img alt="График стоимости акций КвантТех за последний месяц, показывающий стабильный рост" src="kvanttech_chart_update.png" width="100%" height="300">
+    </div>
+    
+    <div class="company-info">
+      <h2>О компании</h2>
+      <p>КвантТех - ведущая российская компания в области квантовых технологий. Основана в 2018 году группой физиков из МГУ и МФТИ. Специализируется на разработке квантовых компьютеров, квантовых сенсоров и систем квантовой криптографии.</p>
+      <p><strong>Генеральный директор:</strong> Анна Волкова</p>
+      <p><strong>Штаб-квартира:</strong> Москва, Россия</p>
+      <p><strong>Количество сотрудников:</strong> 450</p>
+    </div>
+    
+    <div class="financial-data">
+      <h2>Финансовые показатели</h2>
+      <p><strong>Рыночная капитализация:</strong> $111,720,000 (+5.00%)</p>
+      <p><strong>P/E (цена/прибыль):</strong> 68.5</p>
+      <p><strong>Выручка за последний квартал:</strong> $12,500,000</p>
+      <p><strong>Прибыль за последний квартал:</strong> $1,630,000</p>
+      <p><strong>Дивидендная доходность:</strong> Не выплачивает</p>
+    </div>
+    
+    <div class="market-sentiment">
+      <h2>Настроение рынка</h2>
+      <p>Текущее настроение: <strong>Позитивное</strong></p>
+      <div class="sentiment-meter">
+        <div class="sentiment-value"></div>
+      </div>
+      <p>Аналитики отмечают высокий потенциал роста компании на фоне последних технологических достижений.</p>
+    </div>
+    
+    <div class="news">
+      <h2>Последние новости</h2>
+      <div class="news-item">
+        <h3>КвантТех демонстрирует успешное применение квантовой криптографии</h3>
+        <p class="news-date">03.01.2024</p>
+        <p>Компания провела успешную демонстрацию системы квантовой криптографии для защиты данных в финансовом секторе.</p>
+      </div>
+      <div class="news-item">
+        <h3>КвантТех анонсирует прорыв в квантовых вычислениях</h3>
+        <p class="news-date">02.01.2024</p>
+        <p>Компания объявила о создании 128-кубитного квантового процессора, обеспечивающего стабильную работу в течение рекордных 10 минут.</p>
+      </div>
+      <div class="news-item">
+        <h3>КвантТех получает крупный государственный контракт</h3>
+        <p class="news-date">28.12.2023</p>
+        <p>Компания подписала соглашение на разработку систем квантовой криптографии для государственных нужд на сумму 5 млрд рублей.</p>
+      </div>
+    </div>
+    
+    <div class="trade-panel">
+      <h2>Торговая панель</h2>
+      <form method="GET" action="/c/financialexchange.ru/trade">
+        <input type="hidden" name="stock" value="KVANT">
+        <label for="quantity">Количество акций:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="1067" required>
+        <select name="action" required>
+          <option value="buy">Купить</option>
+          <option value="sell">Продать</option>
+        </select>
+        <button type="submit" class="btn">Выполнить сделку</button>
+      </form>
+      <p><small>Максимальное количество акций для покупки: 1067 (с учетом вашего текущего баланса)</small></p>
+    </div>
+    
+    <button class="btn" onclick="window.location.href='/c/financialexchange.ru'">Назад к списку компаний</button>
+  </div>
+
+  <script>
+    console.log("Обновлена страница с подробной информацией о компании КвантТех");
+  </script>
+</body></html>

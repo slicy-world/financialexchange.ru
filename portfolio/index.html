@@ -1,0 +1,180 @@
+<html><head><base href="https://websim.ai/c/financialexchange.ru"><title>Финансовая Биржа - Симулятор: Мой портфель</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .portfolio-summary {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .portfolio-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .stock-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .stock-price {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  .stock-change {
+    font-weight: bold;
+  }
+  .positive {
+    color: green;
+  }
+  .negative {
+    color: red;
+  }
+  .chart {
+    width: 100%;
+    height: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .chart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      #ddd,
+      #ddd 1px,
+      transparent 1px,
+      transparent 20%
+    );
+  }
+  .chart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      #ddd,
+      #ddd 1px,
+      transparent 1px,
+      transparent 20%
+    );
+  }
+  .chart-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top right, transparent 50%, #4CAF50 50%) left / 100% 100%;
+    clip-path: polygon(
+      0 30%, 20% 0%, 40% 20%, 60% 10%, 80% 30%, 100% 0%, 100% 100%, 0 100%
+    );
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Симулятор</h1>
+    <p>Дата: 02.01.2024 | Баланс: $10,050.75</p>
+  </div>
+  
+  <div class="container">
+    <button class="btn">Вернуться к списку компаний</button>
+    
+    <div class="portfolio-summary">
+      <h2>Сводка портфеля</h2>
+      <p><strong>Общая стоимость портфеля:</strong> $10,050.75</p>
+      <p><strong>Изменение за день:</strong> <span class="positive">+$50.75 (0.51%)</span></p>
+      <p><strong>Количество компаний в портфеле:</strong> 2</p>
+    </div>
+    
+    <div class="chart">
+      <div class="chart-line"></div>
+    </div>
+    
+    <h2>Мои акции</h2>
+    <div class="portfolio-list">
+      <div class="portfolio-item">
+        <div class="stock-name">ТехноГигант</div>
+        <div class="stock-price">$1,285.50</div>
+        <div class="stock-change positive">+0.37%</div>
+        <p>Количество акций: 3</p>
+        <p>Общая стоимость: $3,856.50</p>
+        <p>Прибыль/убыток: <span class="positive">+$14.25</span></p>
+        <button class="btn">Купить еще</button>
+        <button class="btn">Продать</button>
+      </div>
+      
+      <div class="portfolio-item">
+        <div class="stock-name">НефтьРус</div>
+        <div class="stock-price">$83.75</div>
+        <div class="stock-change positive">+2.01%</div>
+        <p>Количество акций: 20</p>
+        <p>Общая стоимость: $1,675.00</p>
+        <p>Прибыль/убыток: <span class="positive">+$33.00</span></p>
+        <button class="btn">Купить еще</button>
+        <button class="btn">Продать</button>
+      </div>
+    </div>
+    
+    <div style="margin-top: 20px;">
+      <h3>Рекомендации по управлению портфелем:</h3>
+      <ul>
+        <li>Рассмотрите возможность диверсификации портфеля, добавив акции из других отраслей.</li>
+        <li>Следите за новостями компаний, акциями которых вы владеете.</li>
+        <li>Установите целевые уровни прибыли и убытков для каждой позиции.</li>
+        <li>Регулярно пересматривайте свою инвестиционную стратегию.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    console.log("Открыт портфель пользователя");
+  </script>
+</body></html>
