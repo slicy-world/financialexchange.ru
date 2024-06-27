@@ -1,0 +1,165 @@
+<html><head><base href="https://websim.ai/c/financialexchange.ru/account"><title>Финансовая Биржа - Личный кабинет</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .account-summary {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .account-balance {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .transaction-history {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .positive { color: green; }
+  .negative { color: red; }
+  .settings {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Личный кабинет</h1>
+    <p>Дата: 03.01.2024</p>
+  </div>
+  
+  <div class="container">
+    <div class="account-summary">
+      <h2>Обзор счета</h2>
+      <div class="account-balance">Баланс: $101.32</div>
+      <p>Общая стоимость портфеля: $60,705.44</p>
+      <p>Прибыль/убыток: +$1,078.90 (+1.81%)</p>
+      <button class="btn" onclick="window.location.href='/c/financialexchange.ru/deposit'">Пополнить счет</button>
+      <button class="btn" onclick="window.location.href='/c/financialexchange.ru/withdraw'">Вывести средства</button>
+    </div>
+    
+    <div class="transaction-history">
+      <h2>История операций</h2>
+      <table>
+        <tr>
+          <th>Дата</th>
+          <th>Операция</th>
+          <th>Сумма</th>
+          <th>Баланс</th>
+        </tr>
+        <tr>
+          <td>03.01.2024</td>
+          <td>Покупка KVANT</td>
+          <td class="negative">-$59,662.22</td>
+          <td>$101.32</td>
+        </tr>
+        <tr>
+          <td>02.01.2024</td>
+          <td>Пополнение счета</td>
+          <td class="positive">+$50,000.00</td>
+          <td>$59,763.54</td>
+        </tr>
+        <tr>
+          <td>01.01.2024</td>
+          <td>Начальный депозит</td>
+          <td class="positive">+$10,000.00</td>
+          <td>$10,000.00</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="settings">
+      <h2>Настройки аккаунта</h2>
+      <form action="/c/financialexchange.ru/account/update" method="POST">
+        <div class="form-group">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" value="Иван Петров">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="ivan.petrov@example.com">
+        </div>
+        <div class="form-group">
+          <label for="password">Новый пароль:</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Подтвердите новый пароль:</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+        </div>
+        <button type="submit" class="btn">Сохранить изменения</button>
+      </form>
+    </div>
+    
+    <button class="btn" onclick="window.location.href='/c/financialexchange.ru'">На главную</button>
+    <button class="btn" onclick="window.location.href='/c/financialexchange.ru/portfolio'">Мой портфель</button>
+  </div>
+
+  <script>
+    console.log("Страница личного кабинета загружена");
+  </script>
+</body></html>
