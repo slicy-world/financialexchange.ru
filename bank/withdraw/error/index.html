@@ -1,0 +1,83 @@
+<html><head><base href="/c/financialexchange.ru/c/financialexchange.ru/withdraw/process?amount=50&method=card&bank-name=&account-number=&swift=&card-number=&card-holder=&crypto-address=&crypto-currency=BTC&ewallet-provider=paypal&ewallet-id="><title>Финансовая Биржа - Обработка вывода средств</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .btn-secondary {
+    background-color: #6c757d;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Обработка вывода средств</h1>
+    <p>Дата: 03.01.2024 | Баланс: $101.32</p>
+  </div>
+  
+  <div class="container">
+    <div class="alert alert-danger">
+      <h2>Ошибка при обработке запроса на вывод средств</h2>
+      <p>К сожалению, мы не смогли обработать ваш запрос на вывод средств. Обнаружены следующие проблемы:</p>
+      <ul>
+        <li>Выбран метод вывода "на банковскую карту", но не указаны данные карты.</li>
+        <li>Поле "Номер карты" не заполнено.</li>
+        <li>Поле "Имя владельца карты" не заполнено.</li>
+      </ul>
+      <p>Пожалуйста, вернитесь на страницу вывода средств и заполните все необходимые поля для выбранного метода.</p>
+    </div>
+    
+    <h3>Детали запроса:</h3>
+    <p>Сумма: $50.00</p>
+    <p>Метод: На банковскую карту</p>
+    
+    <button class="btn" onclick="window.location.href='/c/financialexchange.ru/withdraw'">Вернуться к форме вывода</button>
+    <button class="btn btn-secondary" onclick="window.location.href='/c/financialexchange.ru/account'">Вернуться в личный кабинет</button>
+  </div>
+
+  <script>
+    console.log("Страница обработки вывода средств загружена");
+    // Здесь мог бы быть код для отправки аналитики об ошибке вывода средств
+  </script>
+</body></html>

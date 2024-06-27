@@ -1,0 +1,196 @@
+<html><head><base href="/c/financialexchange.ru/withdraw"><title>Финансовая Биржа - Вывод средств</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .btn-secondary {
+    background-color: #6c757d;
+  }
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+  }
+  .alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Финансовая Биржа - Вывод средств</h1>
+    <p>Дата: 03.01.2024 | Баланс: $101.32</p>
+  </div>
+  
+  <div class="container">
+    <div class="alert alert-info">
+      <strong>Внимание!</strong> Вывод средств может занять до 3 рабочих дней в зависимости от выбранного метода.
+    </div>
+    
+    <div class="alert alert-warning">
+      <strong>Напоминание:</strong> Убедитесь, что вы вводите корректные данные для вывода средств. Биржа не несет ответственности за ошибки, допущенные пользователем.
+    </div>
+    
+    <form action="/c/financialexchange.ru/withdraw/process" method="POST">
+      <div class="form-group">
+        <label for="amount">Сумма вывода (USD):</label>
+        <input type="number" id="amount" name="amount" min="10" max="101.32" step="0.01" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="method">Метод вывода:</label>
+        <select id="method" name="method" required>
+          <option value="">Выберите метод</option>
+          <option value="bank">Банковский перевод</option>
+          <option value="card">На банковскую карту</option>
+          <option value="crypto">Криптовалюта</option>
+          <option value="ewallet">Электронный кошелек</option>
+        </select>
+      </div>
+      
+      <div id="bank-details" style="display:none;">
+        <div class="form-group">
+          <label for="bank-name">Название банка:</label>
+          <input type="text" id="bank-name" name="bank-name">
+        </div>
+        <div class="form-group">
+          <label for="account-number">Номер счета:</label>
+          <input type="text" id="account-number" name="account-number">
+        </div>
+        <div class="form-group">
+          <label for="swift">SWIFT/BIC код:</label>
+          <input type="text" id="swift" name="swift">
+        </div>
+      </div>
+      
+      <div id="card-details" style="display:none;">
+        <div class="form-group">
+          <label for="card-number">Номер карты:</label>
+          <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="form-group">
+          <label for="card-holder">Имя владельца карты:</label>
+          <input type="text" id="card-holder" name="card-holder">
+        </div>
+      </div>
+      
+      <div id="crypto-details" style="display:none;">
+        <div class="form-group">
+          <label for="crypto-address">Адрес криптокошелька:</label>
+          <input type="text" id="crypto-address" name="crypto-address">
+        </div>
+        <div class="form-group">
+          <label for="crypto-currency">Криптовалюта:</label>
+          <select id="crypto-currency" name="crypto-currency">
+            <option value="BTC">Bitcoin (BTC)</option>
+            <option value="ETH">Ethereum (ETH)</option>
+            <option value="USDT">Tether (USDT)</option>
+          </select>
+        </div>
+      </div>
+      
+      <div id="ewallet-details" style="display:none;">
+        <div class="form-group">
+          <label for="ewallet-provider">Провайдер электронного кошелька:</label>
+          <select id="ewallet-provider" name="ewallet-provider">
+            <option value="paypal">PayPal</option>
+            <option value="webmoney">WebMoney</option>
+            <option value="yandex">Яндекс.Деньги</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ewallet-id">ID кошелька:</label>
+          <input type="text" id="ewallet-id" name="ewallet-id">
+        </div>
+      </div>
+      
+      <button type="submit" class="btn">Подтвердить вывод</button>
+      <button type="button" class="btn btn-secondary" onclick="window.location.href='/c/financialexchange.ru/account'">Отмена</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('method').addEventListener('change', function() {
+      var bankDetails = document.getElementById('bank-details');
+      var cardDetails = document.getElementById('card-details');
+      var cryptoDetails = document.getElementById('crypto-details');
+      var ewalletDetails = document.getElementById('ewallet-details');
+      
+      bankDetails.style.display = 'none';
+      cardDetails.style.display = 'none';
+      cryptoDetails.style.display = 'none';
+      ewalletDetails.style.display = 'none';
+      
+      switch(this.value) {
+        case 'bank':
+          bankDetails.style.display = 'block';
+          break;
+        case 'card':
+          cardDetails.style.display = 'block';
+          break;
+        case 'crypto':
+          cryptoDetails.style.display = 'block';
+          break;
+        case 'ewallet':
+          ewalletDetails.style.display = 'block';
+          break;
+      }
+    });
+    
+    console.log("Страница вывода средств загружена");
+  </script>
+</body></html>
